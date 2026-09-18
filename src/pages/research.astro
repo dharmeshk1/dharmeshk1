@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const areas=[
+['01','Electrochemical Biosensing','Nanomaterial-enabled sensing platforms, electrode interfaces and analytical strategies for biomedical detection.'],
+['02','Computational Molecular Science','Molecular modelling and electronic-structure approaches for understanding molecular and material behaviour.'],
+['03','Nanomaterials','Structure, properties, characterization and functionalization of nanomaterials for sensing and biomedical applications.'],
+['04','Drug Repurposing','Computational investigation of drug–target interactions to explore potential new biomedical applications.']
+];
+---
+<BaseLayout title="Research — Dharmesh Kumar" description="Research areas of Dharmesh Kumar.">
+<section class="page-hero compact"><p class="eyebrow">RESEARCH</p><h1>Questions first.<br /><em>Methods follow.</em></h1><p class="page-lead">An interdisciplinary research programme connecting materials, molecules, biological systems and computation.</p></section>
+<section class="research-page-grid">
+{areas.map(a=><article class="research-feature"><span>{a[0]}</span><h2>{a[1]}</h2><p>{a[2]}</p><a href="/contact">Discuss this research →</a></article>)}
+</section>
+</BaseLayout>
