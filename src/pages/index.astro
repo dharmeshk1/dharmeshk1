@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+const projects = [
+  {num:'01', title:'Electrochemical Biosensing', text:'Nanomaterial-enabled platforms for sensitive biomedical detection, with a focus on HIV biosensing.'},
+  {num:'02', title:'Computational Modelling', text:'Molecular simulation, electronic structure and computational approaches for understanding materials and biomolecular systems.'},
+  {num:'03', title:'Nanomaterials', text:'Structure, properties and functionalization of nanomaterials for sensing and biomedical applications.'},
+  {num:'04', title:'Drug Repurposing', text:'Computational investigation of molecular interactions to explore new therapeutic applications.'}
+];
+---
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Dharmesh Kumar — Research</title>
+<meta name="description" content="Research identity of Dharmesh Kumar — biosensing, nanomaterials, computational modelling and biomedical research." />
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/">DK<span>.</span></a>
+  <nav><a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <p class="eyebrow">RESEARCH IDENTITY</p>
+  <h1>Dharmesh<br /><em>Kumar</em></h1>
+  <p class="lead">Computational & Experimental Research in Biosensing, Nanomaterials and Molecular Science.</p>
+  <div class="actions"><a class="button" href="#research">Explore research ↗</a><a class="text-link" href="#contact">Get in touch</a></div>
+</section>
+
+<section id="about" class="intro section">
+  <div class="section-label">01 / ABOUT</div>
+  <div><h2>Bridging experiments<br />with <em>computation.</em></h2>
+  <p>I work across experimental biosensing and computational modelling, exploring how materials, molecules and biological systems can be understood and engineered for biomedical applications.</p><p>This website is a living record of my research, projects, publications and scientific interests.</p></div>
+</section>
+
+<section id="research" class="section">
+  <div class="section-label">02 / RESEARCH</div>
+  <div class="research-grid">
+    {projects.map(p => <article class="research-card"><span>{p.num}</span><h3>{p.title}</h3><p>{p.text}</p><a href="#projects">View area →</a></article>)}
+  </div>
+</section>
+
+<section id="projects" class="section projects">
+  <div class="section-label">03 / SELECTED PROJECTS</div>
+  <div class="project-list">
+    <article><div><span>PROJECT 01</span><h3>HIV Electrochemical Biosensor</h3><p>Integrated experimental and computational investigation of nanomaterial-based biosensing.</p></div><b>↗</b></article>
+    <article><div><span>PROJECT 02</span><h3>Molecular & Materials Modelling</h3><p>Computational exploration of molecular structure, electronic properties and material behaviour.</p></div><b>↗</b></article>
+    <article><div><span>PROJECT 03</span><h3>Data-Driven Simulation</h3><p>Exploring large computational datasets and machine learning for materials and device research.</p></div><b>↗</b></article>
+  </div>
+</section>
+
+<section class="section publications">
+  <div class="section-label">04 / PUBLICATIONS</div>
+  <div><h2>Selected scientific<br /><em>work.</em></h2><p class="muted">Publication records, preprints and manuscripts will be added here as the research portfolio develops.</p><a class="button" href="#contact">View publications ↗</a></div>
+</section>
+
+<section id="contact" class="contact">
+  <p class="eyebrow">LET'S CONNECT</p><h2>Have a research<br /><em>conversation?</em></h2>
+  <a class="email" href="mailto:your.email@example.com">your.email@example.com ↗</a>
+  <div class="socials"><a href="https://github.com/dharmeshk1">GitHub</a><a href="#">Google Scholar</a><a href="#">ORCID</a><a href="#">LinkedIn</a></div>
+</section>
+</main>
+<footer>© 2026 Dharmesh Kumar <span>Research identity / V1</span></footer>
+</body></html>
