@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 const base = import.meta.env.BASE_URL;
-const { title = 'Dharmesh Kumar — Research', description = 'Research portfolio of Dharmesh Kumar.' } = Astro.props;
+const { title = 'Dharmesh Kumar — Research', description = 'Research portfolio of Dharmesh Kumar.', section = '' } = Astro.props;
 ---
 <html lang="en">
 <head>
@@ -11,8 +11,19 @@ const { title = 'Dharmesh Kumar — Research', description = 'Research portfolio
 <meta name="description" content={description} />
 </head>
 <body>
-<header class="nav">
-  <a class="brand" href={base}>DK<span>.</span></a>
+<header class="site-header">
+  <a class="logo" href={base} aria-label="Dharmesh Kumar home">
+    <svg viewBox="0 0 116 58" role="img" aria-label="DK logo">
+      <g fill="currentColor">
+        <rect x="0" y="0" width="12" height="58"/><rect x="18" y="0" width="12" height="58"/>
+        <rect x="36" y="0" width="12" height="42"/><rect x="36" y="48" width="12" height="10"/>
+        <rect x="54" y="0" width="12" height="12"/><rect x="54" y="18" width="12" height="40"/>
+        <rect x="76" y="0" width="12" height="58"/><rect x="94" y="0" width="12" height="12"/>
+        <rect x="94" y="18" width="12" height="12"/><rect x="94" y="36" width="12" height="22"/>
+      </g>
+    </svg>
+    <span>Dharmesh<br />Kumar</span>
+  </a>
   <nav aria-label="Primary navigation">
     <a href={base}>Home</a>
     <a href={base + 'about/'}>About</a>
@@ -22,8 +33,13 @@ const { title = 'Dharmesh Kumar — Research', description = 'Research portfolio
     <a href={base + 'cv/'}>CV</a>
     <a href={base + 'contact/'}>Contact</a>
   </nav>
+  <button class="search-button" type="button" aria-label="Search site"><span></span></button>
 </header>
+{section && <div class="page-rail"><span>{section}</span></div>}
 <main><slot /></main>
-<footer>© 2026 Dharmesh Kumar <span>Research identity</span></footer>
+<footer class="site-footer">
+  <div class="footer-brand"><div class="mini-logo">DK</div><div><strong>Dharmesh Kumar</strong><br />Research portfolio<br />India</div></div>
+  <div class="footer-links"><div><a href={base}>Home</a><a href={base + 'about/'}>About</a><a href={base + 'research/'}>Research</a></div><div><a href={base + 'projects/'}>Projects</a><a href={base + 'publications/'}>Publications</a><a href={base + 'cv/'}>CV</a></div><div><a href={base + 'contact/'}>Contact</a><a href="https://github.com/dharmeshk1">GitHub</a></div></div>
+</footer>
 </body>
 </html>
